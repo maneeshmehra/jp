@@ -38,5 +38,5 @@ def sourceContainerComplianceCheck() {
     } else {
         echo "The script did not execute successfully !"
     }
-    echo "Script Output: "${output}"
+    echo "Script Output: ${output}"
 }
