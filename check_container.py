@@ -10,7 +10,7 @@ def main():
         sys.stderr.write("Writing to StdErr: This is an error message\n")
         raise Exception("Raising Exception Due To Number: " + str(num))
     else:
-        sys.stdout.write("No exceptions were raised\n")
+        sys.stdout.write("No exceptions were raised for Number: " + str(num) + "\n")
         
 if __name__ == "__main__":
     main()
