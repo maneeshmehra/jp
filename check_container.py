@@ -4,7 +4,7 @@ import random
 def main():
     sys.stdout.write("Writing to StdOut: Checking Container Image\n")
     
-    num = random.randint(1, 10)
+    num = random.randint(1, 1000)
     
     if (num % 2 != 0):
         sys.stderr.write("Writing to StdErr: This is an error message\n")
