@@ -1,8 +1,8 @@
 import sys
 
 def main():
-    print("Writing to Stdout: Checking Container Image")
-    sys.stderr.write("Writing to StdErr: This is an error message")
+    sys.stdout.write("Writing to StdOut: Checking Container Image\n")
+    sys.stderr.write("Writing to StdErr: This is an error message\n")
 
 if __name__ == "__main__":
     main()
