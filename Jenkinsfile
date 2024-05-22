@@ -31,5 +31,6 @@ pipeline {
 
 def sourceContainerComplianceCheck() {
     echo "Running Compliance Check"
-    sh "python check_container.py"
+    stdout = sh(returnStdout: true, script: """python check_container.py 2>&1""").trim()
+    echo "This is the output from the script: ${stdout}"
 }
