@@ -31,8 +31,8 @@ pipeline {
 
 def sourceContainerComplianceCheck() {
     echo "Running Compliance Check"
-    status = sh(returnStatus: true, script: """python check_container.py > output.txt 2>&1""")
-    output = sh(returnStdout: true, script: """cat output.txt""")
+    def status = sh(returnStatus: true, script: """python check_container.py > output.txt 2>&1""")
+    def output = readFile "output.txt"
     if (status == 0) {
         echo "The script executed successfully !"
     } else {
