@@ -46,6 +46,10 @@ def sourceContainerComplianceCheck() {
             echo "The script did not execute successfully !"
             attempts += 1
         }
-        echo "Script Output: ${output}"
+		handleOutcome(output)
      }
+}
+
+def handleOutcome(output) {
+	echo "Script Output: ${output}"
 }
