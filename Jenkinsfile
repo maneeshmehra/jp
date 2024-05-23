@@ -51,5 +51,6 @@ def sourceContainerComplianceCheck() {
 }
 
 def handleOutcome(output) {
+	echo "Handling Outcome\n"
 	echo "Script Output: ${output}"
 }
