@@ -32,10 +32,10 @@ pipeline {
 def sourceContainerComplianceCheck() {
 
     def maxRetries = 3
-    def attempts = 0
+    def attempts = 1
     def retry = true
 
-    while (retry && attempts < maxRetries) {
+    while (retry && attempts <= maxRetries) {
         echo "Running Compliance Check (Attempt: ${attempts} of ${maxRetries})"
         def status = sh(returnStatus: true, script: """python check_container.py > output.txt 2>&1""")
         def output = readFile "output.txt"
